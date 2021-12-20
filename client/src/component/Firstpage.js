@@ -25,6 +25,7 @@ export default function Firstpage() {
           <i className="far fa-comment-dots logoOfName"></i>
           <input
             type="text"
+            id="delete"
             autocomplete="off"
             placeholder="Type your Name"
             // onChange={setinputusername}

@@ -41,7 +41,7 @@
   /* padding: 4px; */
   background-color: rgb(209 216 221);
   border: 1px dashed;
-  margin-top: 14px;
+  margin-top: 17px;
   padding: 2px;
   padding-left: 15px;
   padding-right: 15px;
@@ -66,23 +66,26 @@
   color: #5b286c;
 }
 .ErpRegisteredName {
-  margin-top: 5px;
-  color: #64a1be;
+  margin-top: 25px;
+  color: #213d4a;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "ZCOOL XiaoWei", serif;
   /* flex-direction: column; */
 }
 .InsTRollNo {
   margin-top: 1px;
-  color: #64a1be;
+  color: #213d4a;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: "ZCOOL XiaoWei", serif;
   /* flex-direction: column; */
 }
 .changeColorOFNameandRoll {
   color: #7e6703;
+  margin-left: 4px;
 }
 #confirmaionmsgContainer {
   display: flex;

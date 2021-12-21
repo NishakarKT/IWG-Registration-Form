@@ -1,7 +1,7 @@
 import "./App.css";
 import React from "react";
 import Firstpage from "./component/Firstpage";
-
+import Thirdpage from "./component/Thirdpage";
 import {
   BrowserRouter as Router,
   Redirect,
@@ -9,19 +9,26 @@ import {
   Route,
 } from "react-router-dom";
 import Confirmationoffirstpage from "./component/Confirmationoffirstpage";
+import Confirminstemail from "./component/Confirminstemail";
 function App() {
   return (
     <>
       <div className="bodyContainer">
         <Router>
           <Switch>
+            <Route path="/Confirminstemail" exact>
+              <Confirminstemail />
+            </Route>
+            <Route path="/Thirdpage" exact>
+              <Thirdpage />
+            </Route>
             <Route path="/Confirmationoffirstpage" exact>
               <Confirmationoffirstpage />
             </Route>
             <Route path="/" exact>
               <Firstpage />
             </Route>
-            {/* <Redirect to="/Firstpage" /> */}
+            <Redirect to="/" />
           </Switch>
         </Router>
       </div>

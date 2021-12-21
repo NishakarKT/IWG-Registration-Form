@@ -37,7 +37,13 @@ export default function Firstpage() {
       let text = `${NameOfStudent}`;
       let index = text.indexOf(" ");
       index = text.indexOf(" ");
-      const result = text.substring(0, index);
+      let result;
+      console.log(index);
+      if (index !== -1) {
+        result = text.substring(0, index);
+      } else {
+        result = `${NameOfStudent}`;
+      }
 
       history.push("/Confirmationoffirstpage", {
         RollNoofStudent: `${RollNoOfStudent}`,
@@ -67,7 +73,7 @@ export default function Firstpage() {
             type="text"
             id="delete"
             autocomplete="off"
-            placeholder="Type your Name"
+            placeholder="Tony Stark"
             onChange={handlestorename}
             onMouseOut={shouldBlur}
             onMouseOver={shouldFocus}
@@ -94,7 +100,7 @@ export default function Firstpage() {
           <input
             type="text"
             autocomplete="off"
-            placeholder="Type your Institute roll"
+            placeholder="21CS12345"
             onChange={handlestorrollnumber}
             onMouseOut={shouldBlur}
             onMouseOver={shouldFocus}

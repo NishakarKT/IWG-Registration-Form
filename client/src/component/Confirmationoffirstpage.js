@@ -10,6 +10,13 @@ export default function Confirmationoffirstpage() {
   function handleSendBackToFrstPage() {
     history.push("/");
   }
+  function handleonClickConfirmButton() {
+    history.push("/Thirdpage", {
+      RollNoofStudent: `${RollNoofStudent}`,
+      StudentName: `${NameofStudent}`,
+      FirstNameofStudent: `${Firstname}`,
+    });
+  }
   return (
     <>
       <div className="ConfrmationPageContainer">
@@ -44,19 +51,19 @@ export default function Confirmationoffirstpage() {
           </div>
           <div>
             <div className="ErpRegisteredName">
-              Name as registered on ERP:{" "}
-              <span className="changeColorOFNameandRoll">{NameofStudent}</span>
+              <div> Name as registered on ERP: </div>
+              <div className="changeColorOFNameandRoll">{NameofStudent}</div>
             </div>
             <div className="InsTRollNo">
-              Institute Roll Number:{" "}
-              <span className="changeColorOFNameandRoll">
-                {RollNoofStudent}
-              </span>
+              <div> Institute Roll Number: </div>
+              <div className="changeColorOFNameandRoll">{RollNoofStudent}</div>
             </div>
           </div>
         </div>
         <div className="ConfirmButtonbutton">
-          <div id="Confirmbutton">Confirm</div>
+          <div id="Confirmbutton" onClick={handleonClickConfirmButton}>
+            Confirm
+          </div>
         </div>
       </div>
     </>

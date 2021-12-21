@@ -1,0 +1,66 @@
+.ThirdPageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+
+  /* width: 100%; */
+  flex-direction: column;
+  box-shadow: -1px 0px 8px 0px grey;
+}
+#suffuxemailOfStudent {
+  position: absolute;
+  top: 26px;
+  left: 141px;
+  font-size: 10px;
+  color: rgb(79 42 138);
+  background: #dbe1dd;
+  cursor: pointer;
+  border: none;
+}
+.WhatInstituteEmail {
+  /* border: 1px solid blue; */
+  margin-top: 15px;
+  position: relative;
+}
+.WhatInstituteEmail input {
+  padding-left: 25px;
+  margin-top: 6px;
+  border: 1px dashed rgb(5 83 107);
+  border-radius: 1px;
+  width: 255px;
+}
+.WhatInstituteEmail h5 {
+  /* color: coral; */
+  color: teal;
+}
+.WhatPersonalEmail {
+  /* border: 1px solid yellow; */
+  margin-top: 15px;
+  position: relative;
+}
+.WhatPersonalEmail input {
+  padding-left: 25px;
+  margin-top: 6px;
+  border: 1px dashed rgb(5 83 107);
+  border-radius: 1px;
+  width: 255px;
+}
+.WhatPersonalEmail h5 {
+  /* color: coral; */
+  color: teal;
+}
+.logoOfInstEmail {
+  color: rgb(33 125 180);
+
+  position: absolute;
+  top: 25px;
+  right: 235px;
+}
+.logoOfpersonalEmail {
+  color: rgb(33 125 180);
+
+  position: absolute;
+  top: 25px;
+  right: 235px;
+}

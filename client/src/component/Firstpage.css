@@ -20,6 +20,7 @@
   margin-top: 6px;
   border: 1px dashed rgb(5 83 107);
   border-radius: 1px;
+  padding-top: 1px;
 }
 .WhatName h5 {
   /* color: coral; */
@@ -35,6 +36,7 @@
   margin-top: 6px;
   border: 1px dashed rgb(5 83 107);
   border-radius: 1px;
+  padding-top: 1px;
 }
 .WhatRollNumber h5 {
   /* color: coral; */
@@ -67,15 +69,17 @@
   border: 1px dashed;
 }
 .logoOfName {
-  color: rgb(20, 20, 19);
+  color: rgb(33 125 180);
+
   position: absolute;
-  top: 25px;
+  top: 26px;
   right: 168px;
 }
 .logoOfRoll {
-  color: rgb(20, 20, 19);
+  color: rgb(33 125 180);
+
   position: absolute;
-  top: 25px;
+  top: 26px;
   right: 168px;
 }
 .headingFresherSelection h3 {

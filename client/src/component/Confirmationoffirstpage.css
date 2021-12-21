@@ -1,0 +1,92 @@
+.ConfrmationPageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+
+  /* width: 100%; */
+  flex-direction: column;
+  box-shadow: -1px 0px 8px 0px grey;
+  position: relative;
+}
+
+.Confirmationoffirstpage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.BacrToFirstPageArrow {
+  /* display: inline-block; */
+  /* width: 100%; */
+  text-align: left;
+  /* border: 1px solid red; */
+  font-size: 15px;
+  position: absolute;
+  top: 17px;
+  left: 23px;
+  cursor: pointer;
+  color: #64a1be;
+}
+.BacrToFirstPageArrow:hover {
+  color: red;
+}
+.previousArrow {
+  font-size: 28px;
+  position: absolute;
+  top: -12px;
+  left: -7px;
+}
+#Confirmbutton {
+  /* padding: 4px; */
+  background-color: rgb(209 216 221);
+  border: 1px dashed;
+  margin-top: 14px;
+  padding: 2px;
+  padding-left: 15px;
+  padding-right: 15px;
+  border-radius: 4px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+#Confirmbutton:hover {
+  background-color: cadetblue;
+  color: white;
+  border: 1px dashed;
+}
+.msgToStudent {
+  margin-top: 4px;
+  color: #5b286c;
+}
+.msgForGoBack {
+  margin-top: 2px;
+  color: #5b286c;
+}
+.ErpRegisteredName {
+  margin-top: 5px;
+  color: #64a1be;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+}
+.InsTRollNo {
+  margin-top: 1px;
+  color: #64a1be;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+}
+.changeColorOFNameandRoll {
+  color: #7e6703;
+}
+#confirmaionmsgContainer {
+  display: flex;
+  flex-direction: column;
+  /* border: 1px solid blue; */
+  padding: 2px;
+}

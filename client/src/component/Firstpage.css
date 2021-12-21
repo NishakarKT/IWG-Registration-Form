@@ -27,7 +27,7 @@
 }
 .WhatRollNumber {
   /* border: 1px solid yellow; */
-  margin-top: 10px;
+  margin-top: 15px;
   position: relative;
 }
 .WhatRollNumber input {
@@ -40,9 +40,7 @@
   /* color: coral; */
   color: teal;
 }
-.IWGLogoContainer {
-  /* border: 1px solid brown; */
-}
+
 .IWGLogoContainer img {
   /* border: 1px solid rgb(67, 26, 201); */
 
@@ -61,6 +59,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 #nextbutton:hover {
   background-color: cadetblue;
@@ -81,4 +80,21 @@
 }
 .headingFresherSelection h3 {
   color: coral;
+  font-family: "ZCOOL XiaoWei", serif;
+}
+.BlankerrorForRoll {
+  position: absolute;
+  color: red;
+  top: 39px;
+  right: -1px;
+  font-size: 13px;
+  font-weight: bold;
+}
+.BlankerrorForName {
+  position: absolute;
+  color: red;
+  top: 39px;
+  right: -1px;
+  font-size: 13px;
+  font-weight: bold;
 }

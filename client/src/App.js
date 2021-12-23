@@ -2,6 +2,7 @@ import "./App.css";
 import React from "react";
 import Firstpage from "./component/Firstpage";
 import Thirdpage from "./component/Thirdpage";
+import Fifthpage from "./component/Fifthpage";
 import {
   BrowserRouter as Router,
   Redirect,
@@ -16,6 +17,9 @@ function App() {
       <div className="bodyContainer">
         <Router>
           <Switch>
+            <Route path="/Fifthpage" exact>
+              <Fifthpage />
+            </Route>
             <Route path="/Confirminstemail" exact>
               <Confirminstemail />
             </Route>

@@ -9,6 +9,7 @@
   flex-direction: column;
   box-shadow: -1px 0px 8px 0px grey;
   /* width: 400px; */
+  background-color: white;
 }
 .WhatName {
   /* border: 1px solid blue; */

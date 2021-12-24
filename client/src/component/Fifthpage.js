@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import "./Fifthpage.css";
 import { useLocation, useHistory } from "react-router-dom";
 export default function Fifthpage() {
   const history = useHistory();
   const location = useLocation();
   const NameofStudent = location.state.StudentName;
   const RollNoofStudent = location.state.RollNoofStudent;
-  const Firstname = location.state.FirstNameofStudentt;
+  const Firstname = location.state.FirstNameofStudent;
   const InstituteEmail = location.state.Instemail;
   const PersonalEmail = location.state.Personalmail;
   const [Teama, setTeama] = useState("");
@@ -16,7 +17,9 @@ export default function Fifthpage() {
   const [clickb, setclickb] = useState(false);
   const [clickc, setclickc] = useState(false);
   const [clickd, setclickd] = useState(false);
-  const [YourIntrestedPart, setYourIntrestedPart] = useState();
+  const [OpacityerrorIntrest, setOpacityerrorIntrest] = useState(false);
+  // const [YourIntrestedPart, setYourIntrestedPart] = useState("bbb");
+  let YourIntrestedPart = "";
   function Team1(e) {
     setTeama(e.target.value);
     setclicka(!clicka);
@@ -34,46 +37,42 @@ export default function Fifthpage() {
     setclickd(!clickd);
   }
   function IntresredField() {
-    //   if(clicka===true && clickb===true && clickc===true && clickd===true){
-    //     setYourIntrestedPart("Core Team, Design Team, Web Team and Content Team")
-    //   }
-    //  else if(clicka===true && clickb===true && clickc===true && clickd!==true){
-    //     setYourIntrestedPart("Core Team, Design Team and Web Team")
-    //   }
-    //   else if(clicka===true && clickb===true && clickc!==true && clickd===true){
-    //     setYourIntrestedPart("Core Team, Designe Team and Content Team")
-    //   }
-    //   else if(clicka===true && clickb!==true && clickc===true && clickd===true){
-    //     setYourIntrestedPart("Core Team, Web Team and Content Team")
-    //   }
-    //   else if(clicka!==true && clickb===true && clickc===true && clickd===true){
-    //     setYourIntrestedPart("Design Team, Web Team and Content Team")
-    //   }
-    //   else  if(clicka===true && clickb===true && clickc!==true && clickd!==true){
-    //     setYourIntrestedPart("Core Team and Design Team")
-    //   }
-    //   else  if(clicka===true && clickb!==true && clickc===true && clickd!==true){
-    //     setYourIntrestedPart("Core Team and Design Team")
-    //   }
-    //   else  if(clicka!==true && clickb===true && clickc===true && clickd!==true){
-    //     setYourIntrestedPart("Core Team and Design Team")
-    //   }
-    //   else  if(clicka===true && clickb!==true && clickc!==true && clickd===true){
-    //     setYourIntrestedPart("Core Team and Design Team")
-    //   }
-    //   else  if(clicka!==true && clickb===true && clickc!==true && clickd===true){
-    //     setYourIntrestedPart("Core Team and Design Team")
-    //   } else  if(clicka!==true && clickb!==true && clickc===true && clickd===true){
-    //     setYourIntrestedPart("Core Team and Design Team")
-    //   }
+    if (clicka === true) {
+      YourIntrestedPart = YourIntrestedPart.concat(`'Core Team'`, " ");
+      setOpacityerrorIntrest(false);
+    }
+    if (clickb === true) {
+      YourIntrestedPart = YourIntrestedPart.concat(`'Design Team'`, " ");
+      setOpacityerrorIntrest(false);
+    }
+    if (clickc === true) {
+      YourIntrestedPart = YourIntrestedPart.concat(`'Web Team'`, " ");
+      setOpacityerrorIntrest(false);
+    }
+    if (clickd === true) {
+      YourIntrestedPart = YourIntrestedPart.concat(`'Content Team'`, " ");
+      setOpacityerrorIntrest(false);
+    }
+    if (
+      clicka === true ||
+      clickb === true ||
+      clickc === true ||
+      clickd === true
+    ) {
+      history.push("/Sixthpage", {
+        RollNoofStudent: `${RollNoofStudent}`,
+        StudentName: `${NameofStudent}`,
+        FirstNameofStudent: `${Firstname}`,
+        Instemail: `${InstituteEmail}`,
+        Personalmail: `${PersonalEmail}`,
+        IntrestedField: `${YourIntrestedPart}`,
+      });
+    } else {
+      setOpacityerrorIntrest(true);
+    }
   }
   return (
     <div>
-      {" "}
-      {/* <div>
-        {NameofStudent}, {RollNoofStudent},{Firstname},{InstituteEmail},
-        {PersonalEmail}{" "}
-      </div> */}
       <div className="confirmationemailpageContainer">
         <div className="headingFresherSelection">
           <h3>Fresher's Selection</h3>
@@ -84,11 +83,11 @@ export default function Fifthpage() {
             alt="IWG LOGO"
           />
         </div>
-        <div>
+        <div className="intrestedTeamNames">
           {" "}
           <h5>Choose your intrested part</h5>
         </div>
-        <div>
+        <div className="intrestedTeamNamesinput">
           <input
             type="checkbox"
             id="Team1"
@@ -129,6 +128,14 @@ export default function Fifthpage() {
           <div id="VerifyOTPbutton" onClick={IntresredField}>
             Intrested
           </div>
+        </div>
+        <div
+          className="UnselectedIntrestNotification"
+          style={
+            OpacityerrorIntrest === true ? { opacity: "1" } : { opacity: "0" }
+          }
+        >
+          Please select your intrest!
         </div>
       </div>
     </div>

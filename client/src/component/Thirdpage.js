@@ -89,7 +89,7 @@ export default function Thirdpage() {
             type="text"
             id="delete"
             autocomplete="off"
-            placeholder="aryanroy.tony"
+            placeholder="aryanroy.tony@iitkgp.ac.in"
             onChange={handleonChangeInstituteEmail}
             onMouseOut={shouldBlur}
             onMouseOver={shouldFocus}

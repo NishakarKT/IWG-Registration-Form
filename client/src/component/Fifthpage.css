@@ -1,0 +1,51 @@
+.intrestedTeamNames {
+  margin-top: 7px;
+}
+.intrestedTeamNames h5 {
+  margin-bottom: 6px;
+  font-family: "ZCOOL XiaoWei";
+}
+.intrestedTeamNamesinput label {
+  margin-left: 8px;
+  color: #785c32;
+  font-size: 14px;
+  font-family: monospace;
+}
+.UnselectedIntrestNotification {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  font-family: monospace;
+  font-weight: bold;
+}
+.gggh {
+  width: 231.6px;
+}
+.gggh textarea {
+  padding-top: 2px;
+}
+#marginTOP {
+  margin-top: 10px;
+}
+.lastpageIWGTEAM {
+  display: flex;
+  justify-content: end;
+  width: 231.6px;
+}
+.Okaybutton {
+  border: 1px solid saddlebrown;
+  background-color: #c7dee0;
+  width: 47px;
+  font-family: fangsong;
+  text-align: center;
+  padding: 1px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.Okaybutton:hover {
+  background-color: #cfc688;
+  color: #453119;
+}

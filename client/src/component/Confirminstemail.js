@@ -25,6 +25,7 @@ export default function Confirminstemail() {
         Personalmail: `${PersonalEmail}`,
       });
     }
+    console.log(isActiveOTP);
   }
   function shouldBlur(e) {
     e.target.blur();

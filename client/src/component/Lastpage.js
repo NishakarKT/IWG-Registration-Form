@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import { useLocation, useHistory } from "react-router-dom";
+import $ from "jquery"
 export default function Lastpage() {
   const history = useHistory();
   const location = useLocation();
@@ -15,6 +16,33 @@ export default function Lastpage() {
     history.push("/Firstpage");
   }
   setTimeout(call, 12000);
+
+  useEffect(() => {
+    $.ajax({
+        url: "https://script.google.com/macros/s/AKfycbwD-qPU8kK60_6M42tRf7LzK2674VXjZSp8ZsmOAE3dzGVY-13PPRwWf1Rv7X6X4SgG/exec",
+        type: "post",
+        data: $("#finalForm").serialize(),
+        success: res => {
+          // success
+        }
+    });
+  }, []);
+
+  const formToSheet = e => {
+    // e.preventDefault();
+    // console.log("eg5g");
+    // console.log(e.target.serialize());
+    // $.ajax({
+    //     url: "https://script.google.com/macros/s/AKfycbwD-qPU8kK60_6M42tRf7LzK2674VXjZSp8ZsmOAE3dzGVY-13PPRwWf1Rv7X6X4SgG/exec",
+    //     type: "post",
+    //     data: e.target.serialize(),
+    //     success: res => {
+    //         console.log(res);
+    //         window.location.reload();
+    //     }
+    // });
+  };
+
   return (
     <>
       {/* <div>
@@ -51,6 +79,15 @@ export default function Lastpage() {
           </div>
         </div> */}
       </div>
+      <form id="finalForm" style={{ display: "none" }}>
+        <input name="Name" value={NameofStudent} />
+        <input name="Roll" value={RollNoofStudent} />
+        <input name="Institute Email" value={InstituteEmail} />
+        <input name="Personal Email" value={PersonalEmail} />
+        <input name="Interest" value={YourIntrestedPart} />
+        <input name="Why Us?" value={Answera} />
+        <input name="Why You?" value={Answerb} />
+      </form>
     </>
   );
 }

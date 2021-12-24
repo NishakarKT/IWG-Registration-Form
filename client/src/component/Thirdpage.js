@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import axios from "axios";
 import "./Thirdpage.css";
 import { useLocation, useHistory } from "react-router-dom";
 export default function Thirdpage() {
@@ -67,6 +68,17 @@ export default function Thirdpage() {
         Instemail: `${instituteEmail}${valueOfdropdown}`,
         Personalmail: `${personalEmail}`,
       });
+      try {
+        axios.post("http://localhost:8000/otp/generate", { email: instituteEmail + valueOfdropdown })
+          .then(res => {
+            // success
+          })
+          .catch(err => {
+            // handle error
+          })
+      } catch (err) {
+        //handle error
+      };
     }
   }
   return (

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { useLocation, useHistory } from "react-router-dom";
+import axios from 'axios';
 import "./Confirminstemail.css";
 export default function Confirminstemail() {
   const location = useLocation();
@@ -17,13 +18,23 @@ export default function Confirminstemail() {
     } else if (UserOTP.length === 0) {
       setisActiveOTP(true);
     } else {
-      history.push("/Fifthpage", {
-        RollNoofStudent: `${RollNoofStudent}`,
-        StudentName: `${NameofStudent}`,
-        FirstNameofStudent: `${Firstname}`,
-        Instemail: `${InstituteEmail}`,
-        Personalmail: `${PersonalEmail}`,
-      });
+      try {
+        axios.post("http://localhost:8000/otp/verify", { email: InstituteEmail, otp: UserOTP })
+          .then(res => {
+            history.push("/Fifthpage", {
+              RollNoofStudent: `${RollNoofStudent}`,
+              StudentName: `${NameofStudent}`,
+              FirstNameofStudent: `${Firstname}`,
+              Instemail: `${InstituteEmail}`,
+              Personalmail: `${PersonalEmail}`,
+            });
+          })
+          .catch(err => {
+            // handle error
+          })
+      } catch (err) {
+        // handle error
+      }
     }
     console.log(isActiveOTP);
   }

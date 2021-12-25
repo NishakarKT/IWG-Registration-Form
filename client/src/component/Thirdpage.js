@@ -77,7 +77,7 @@ export default function Thirdpage() {
         </div>
         <div className="IWGLogoContainer">
           <img
-            src={process.env.PUBLIC_URL + "/image/IWGLogo.png "}
+            src={process.env.PUBLIC_URL + "/image/IWGLogo.png"}
             alt="IWG LOGO"
           />
         </div>

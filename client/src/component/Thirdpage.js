@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import axios from "axios";
 import "./Thirdpage.css";
 import { useLocation, useHistory } from "react-router-dom";
 export default function Thirdpage() {
@@ -61,24 +60,13 @@ export default function Thirdpage() {
     } else if (personalEmail.length === 0) {
       setisActivepersonalEmailBlank(true);
     } else {
-      history.push("/Confirminstemail", {
+      history.push("/FifthPage", {
         RollNoofStudent: `${RollNoofStudent}`,
         StudentName: `${NameofStudent}`,
         FirstNameofStudent: `${Firstname}`,
         Instemail: `${instituteEmail}${valueOfdropdown}`,
         Personalmail: `${personalEmail}`,
       });
-      try {
-        axios.post("http://localhost:8000/otp/generate", { email: instituteEmail + valueOfdropdown })
-          .then(res => {
-            // success
-          })
-          .catch(err => {
-            // handle error
-          })
-      } catch (err) {
-        //handle error
-      };
     }
   }
   return (
@@ -178,7 +166,7 @@ export default function Thirdpage() {
 
         <div className="FirstpageNextbutton">
           <div id="nextbutton" onClick={GETOTP}>
-            Get OTP
+            Next
           </div>
         </div>
       </div>

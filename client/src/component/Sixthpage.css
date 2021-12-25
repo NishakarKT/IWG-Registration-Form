@@ -1,0 +1,23 @@
+#nextbutton {
+    /* padding: 4px; */
+    width: fit-content;
+    margin: auto;
+    background-color: rgb(209 216 221);
+    border: 1px dashed;
+    margin-top: 14px;
+    padding: 2px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  #nextbutton:hover {
+    background-color: cadetblue;
+    color: white;
+    border: 1px dashed;
+  }
+  

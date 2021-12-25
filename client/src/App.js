@@ -12,7 +12,6 @@ import {
   Route,
 } from "react-router-dom";
 import Confirmationoffirstpage from "./component/Confirmationoffirstpage";
-import Confirminstemail from "./component/Confirminstemail";
 function App() {
   return (
     <>
@@ -27,9 +26,6 @@ function App() {
             </Route>
             <Route path="/Fifthpage" exact>
               <Fifthpage />
-            </Route>
-            <Route path="/Confirminstemail" exact>
-              <Confirminstemail />
             </Route>
             <Route path="/Thirdpage" exact>
               <Thirdpage />

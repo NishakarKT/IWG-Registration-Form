@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useLocation, useHistory } from "react-router-dom";
+import "./Sixthpage.css";
 export default function Sixthpage() {
   const history = useHistory();
   const location = useLocation();
@@ -94,7 +95,7 @@ export default function Sixthpage() {
           />
         </div>
         <div className="VerifyButtonbutton">
-          <div id="VerifyOTPbutton" onClick={submitFinalAnswer}>
+          <div id="nextbutton" onClick={submitFinalAnswer}>
             Submit
           </div>
         </div>

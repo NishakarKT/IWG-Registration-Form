@@ -125,7 +125,7 @@ export default function Fifthpage() {
           <label for="Team4">Content-Team</label>
         </div>
         <div className="VerifyButtonbutton">
-          <div id="VerifyOTPbutton" onClick={IntresredField}>
+          <div id="nextbutton" onClick={IntresredField}>
             Intrested
           </div>
         </div>

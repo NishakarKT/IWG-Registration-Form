@@ -26,13 +26,14 @@ const sendMail = async (sendee, subject, template, replacements) => new Promise(
     const modifiedTemplate = getModifiedTemplate(template, replacements);
 
     const options = {
-        from: process.env.USER,
+        from: process.env.EMAIL,
         to: sendee,
         subject,
         html: modifiedTemplate
     };
 
     transporter.sendMail(options, (err, info) => {
+        console.log(err);
         if (err) resolve(err);
         else resolve(info.response);
     });

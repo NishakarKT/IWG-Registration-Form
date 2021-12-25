@@ -134,13 +134,13 @@ export default function Thirdpage() {
           </select>
         </div>
         <div className="WhatPersonalEmail">
-          <h5>What is your personal email ?</h5>
+          <h5>What is your phone number ?</h5>
           <i className="far fa-envelope logoOfpersonalEmail"></i>
 
           <input
             type="text"
             autocomplete="off"
-            placeholder="aryanroy.tony@gmail.com"
+            placeholder="7654***432"
             onChange={handleonChangePersonalEmail}
             onMouseOut={shouldBlur}
             onMouseOver={shouldFocus}

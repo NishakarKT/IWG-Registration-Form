@@ -73,7 +73,7 @@ export default function Fifthpage() {
   }
   return (
     <div>
-      <div className="confirmationemailpageContainer">
+      <div className="ThirdPageContainer">
         <div className="headingFresherSelection">
           <h3>Fresher's Selection</h3>
         </div>

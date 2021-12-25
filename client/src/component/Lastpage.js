@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useLocation, useHistory } from "react-router-dom";
-import $ from "jquery"
+import $ from "jquery";
 export default function Lastpage() {
   const history = useHistory();
   const location = useLocation();
@@ -19,16 +19,16 @@ export default function Lastpage() {
 
   useEffect(() => {
     $.ajax({
-        url: "https://script.google.com/macros/s/AKfycbwD-qPU8kK60_6M42tRf7LzK2674VXjZSp8ZsmOAE3dzGVY-13PPRwWf1Rv7X6X4SgG/exec",
-        type: "post",
-        data: $("#finalForm").serialize(),
-        success: res => {
-          // success
-        }
+      url: "https://script.google.com/macros/s/AKfycbwD-qPU8kK60_6M42tRf7LzK2674VXjZSp8ZsmOAE3dzGVY-13PPRwWf1Rv7X6X4SgG/exec",
+      type: "post",
+      data: $("#finalForm").serialize(),
+      success: (res) => {
+        // success
+      },
     });
   }, []);
 
-  const formToSheet = e => {
+  const formToSheet = (e) => {
     // e.preventDefault();
     // console.log("eg5g");
     // console.log(e.target.serialize());
@@ -49,7 +49,7 @@ export default function Lastpage() {
         {NameofStudent}, {RollNoofStudent},{Firstname},{InstituteEmail},
         {PersonalEmail},{YourIntrestedPart},{Answera},{Answerb}
       </div> */}
-      <div className="confirmationemailpageContainer">
+      <div className="ThirdPageContainer">
         {/* <div className="headingFresherSelection">
           <h3>Fresher's Selection</h3>
         </div>

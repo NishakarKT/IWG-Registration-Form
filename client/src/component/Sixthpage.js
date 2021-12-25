@@ -51,7 +51,7 @@ export default function Sixthpage() {
         {NameofStudent}, {RollNoofStudent},{Firstname},{InstituteEmail},
         {PersonalEmail},{YourIntrestedPart}
       </diV> */}
-      <div className="confirmationemailpageContainer">
+      <div className="ThirdPageContainer">
         <div className="headingFresherSelection">
           <h3>Fresher's Selection</h3>
         </div>
